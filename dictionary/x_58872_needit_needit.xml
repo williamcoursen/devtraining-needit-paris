@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="Initial start" max_length="40" name="initial_start" read_only="true" type="glide_date"/>
+        <element attributes="encode_utf8=false" label="Requested by" max_length="32" name="u_requested_by" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="work in progress" label="Status" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Work in Progress" sequence="0" value="work in progress"/>
+                <element inactive_on_update="false" label="Not started" sequence="1" value="not started"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
+            </choice>
+        </element>
+    </element>
+</database>
